@@ -10,10 +10,10 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 
 # The visual studio configurations are as follows.
 
-## In the project properties
+# In the project properties
 ![01_configuration](01_configuration.png)
 
-## General
+# General
 
 ![02_configuration](02_configuration.png)
 
@@ -21,7 +21,7 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 * Dynamic Library (.dll) configuration type
 * C++ Language Standart C++ 17
 
-## VCC Directories
+# VCC Directories
 
 ![03_configuration](03_configuration.png)
 
@@ -34,7 +34,7 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 ![05_configuration](05_configuration.png)
 
 
-## C/C++
+# C/C++
 
 # Code Generation
 
