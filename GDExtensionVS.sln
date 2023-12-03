@@ -23,10 +23,8 @@ Global
 		{710C6B44-6283-4410-86BD-8243CD6580FB}.Game_Debug_Godot|x64.Build.0 = Game_Debug_Godot|x64
 		{710C6B44-6283-4410-86BD-8243CD6580FB}.Game_Debug_Godot|x86.ActiveCfg = Game_Debug_Godot|Win32
 		{710C6B44-6283-4410-86BD-8243CD6580FB}.Game_Debug_Godot|x86.Build.0 = Game_Debug_Godot|Win32
-		{710C6B44-6283-4410-86BD-8243CD6580FB}.Release|x64.ActiveCfg = Release|x64
-		{710C6B44-6283-4410-86BD-8243CD6580FB}.Release|x64.Build.0 = Release|x64
-		{710C6B44-6283-4410-86BD-8243CD6580FB}.Release|x86.ActiveCfg = Release|Win32
-		{710C6B44-6283-4410-86BD-8243CD6580FB}.Release|x86.Build.0 = Release|Win32
+		{710C6B44-6283-4410-86BD-8243CD6580FB}.Release|x64.ActiveCfg = Editor_Debug_Godot|x64
+		{710C6B44-6283-4410-86BD-8243CD6580FB}.Release|x86.ActiveCfg = Editor_Debug_Godot|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -32,6 +32,8 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 
 ![13_configuration](13_configuration.png)
 
+* In this project the two configurations are added
+![16_configuration](13_configuration.png)
 
 # VCC Directories
 
