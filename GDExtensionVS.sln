@@ -11,6 +11,8 @@ Global
 		Editor_Debug_Godot|x86 = Editor_Debug_Godot|x86
 		Game_Debug_Godot|x64 = Game_Debug_Godot|x64
 		Game_Debug_Godot|x86 = Game_Debug_Godot|x86
+		GenerateStaticLibraryGodot-cpp|x64 = GenerateStaticLibraryGodot-cpp|x64
+		GenerateStaticLibraryGodot-cpp|x86 = GenerateStaticLibraryGodot-cpp|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{710C6B44-6283-4410-86BD-8243CD6580FB}.Editor_Debug_Godot|x64.ActiveCfg = Editor_Debug_Godot|x64
@@ -21,6 +23,10 @@ Global
 		{710C6B44-6283-4410-86BD-8243CD6580FB}.Game_Debug_Godot|x64.Build.0 = Game_Debug_Godot|x64
 		{710C6B44-6283-4410-86BD-8243CD6580FB}.Game_Debug_Godot|x86.ActiveCfg = Game_Debug_Godot|Win32
 		{710C6B44-6283-4410-86BD-8243CD6580FB}.Game_Debug_Godot|x86.Build.0 = Game_Debug_Godot|Win32
+		{710C6B44-6283-4410-86BD-8243CD6580FB}.GenerateStaticLibraryGodot-cpp|x64.ActiveCfg = GenerateStaticLibraryGodot-cpp|x64
+		{710C6B44-6283-4410-86BD-8243CD6580FB}.GenerateStaticLibraryGodot-cpp|x64.Build.0 = GenerateStaticLibraryGodot-cpp|x64
+		{710C6B44-6283-4410-86BD-8243CD6580FB}.GenerateStaticLibraryGodot-cpp|x86.ActiveCfg = GenerateStaticLibraryGodot-cpp|Win32
+		{710C6B44-6283-4410-86BD-8243CD6580FB}.GenerateStaticLibraryGodot-cpp|x86.Build.0 = GenerateStaticLibraryGodot-cpp|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
