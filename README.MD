@@ -41,6 +41,7 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 * Runtime Library Multi-treaded Debug DLL(/MDd)
 ![06_configuration](06_configuration.png)
 
+
 # Linker
 
 ## General
