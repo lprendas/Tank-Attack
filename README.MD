@@ -62,14 +62,15 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 
 * Here you have to add the name of the binding generated from godot-cpp that is located within the godot-cpp/bin folder
 
+![10_configuration](10_configuration.png)
 
+* If we open the project folder with VScode you can see where the precompiled binding is located within Godot-cpp and there we can obtain its name, path or whatever
 
-
-
+![11_configuration](11_configuration.png)
 
 
 # ----------------------------------------------
-# ----------------------------------------------
+
 
 # ERROR DETAILS
 
