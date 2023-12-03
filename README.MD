@@ -23,7 +23,7 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 
 ## VCC Directories
 
-![02_configuration](02_configuration.png)
+![02_configuration](03_configuration.png)
 
 * Include Directories the paths go to the bookstore
 * Library Directoria path to the preconfigured binding that is in Godot-cpp/bin
