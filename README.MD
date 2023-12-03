@@ -30,7 +30,7 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 
 * Command Arguments Alternatively you can add command arguments such as "--editor" to run the editor instead of the game within visual studio, you can create different configurations within the editor.
 
-![13_configuration](03_configuration.png)
+![13_configuration](13_configuration.png)
 
 
 # VCC Directories
