@@ -23,10 +23,14 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 
 
 # Debugging
-![12_configuration](02_configuration.png)
+![12_configuration](12_configuration.png)
 
 * Command "You have to add the path to the Godot executable"
 * Working Directory "You have to add the path to the Godot project, by default the main scene will be executed"
+
+* Command Arguments Alternatively you can add command arguments such as "--editor" to run the editor instead of the game within visual studio, you can create different configurations within the editor.
+
+![13_configuration](03_configuration.png)
 
 
 # VCC Directories
