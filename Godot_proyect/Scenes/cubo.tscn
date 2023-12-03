@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvfb5afatj4io"]
+
+[ext_resource type="PackedScene" uid="uid://celphjmwwibjj" path="res://Escenes_Blender/Cubo.blend" id="1_vgmfp"]
+
+[node name="Cubo" instance=ExtResource("1_vgmfp")]
