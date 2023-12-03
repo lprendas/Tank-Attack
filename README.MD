@@ -5,7 +5,7 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 
 ![01_ErrorVisualStudioGDExtension](01_ErrorVisualStudioGDExtension.png)
 
-
+# The visual studio configurations are as follows.
 
 
 
@@ -119,5 +119,6 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 
 # I leave links to two preconfigured Vscode projects working correctly.
 https://gitlab.com/kone9/godot-engine-4.2-template-gdextension-with-vscode-windows-11
+
 https://gitlab.com/kone9/godot-engine-4.2-template-gdextension-with-vscode
 
