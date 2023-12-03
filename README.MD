@@ -17,7 +17,7 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 
 ![02_configuration](02_configuration.png)
 
-* output directory goes to the location where the dll is compiled
+* directory goes to the location where the dll is compiled, that is, inside the game project directory, this is the dll that works with GDextension
 * Dynamic Library (.dll) configuration type
 * C++ Language Standart C++ 17
 
@@ -34,7 +34,12 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 ![05_configuration](05_configuration.png)
 
 
+## C/C++
 
+# Code Generation
+
+* Runtime Library Multi-treaded Debug DLL(/MDd)
+![06_configuration](06_configuration.png)
 
 
 
