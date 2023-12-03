@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="DemoGDextension_4_2"
+config/name="VisualStudio_GDextension_4_2"
 config/description="a preconfigured project with Godot Engine C++ using GDextension."
 run/main_scene="res://Scenes/main2D.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
