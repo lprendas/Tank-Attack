@@ -197,6 +197,11 @@ Build started at 11:07...
 ========== Build completed at 11:07 and took 02,300 seconds ==========
 
 
+# To try this project make sure you have Visual Studio 2022 stable, Python, Scons and MVSC installed correctly on your Windows 11 PC
+
+![17_configuration](17_configuration.png)
+
+
 
 
 # I leave links to two preconfigured Vscode projects working correctly.
