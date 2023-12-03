@@ -3,10 +3,10 @@
 
 The project compiles, it even opens Godot Engine in debug mode, but there seems to be a problem with the bindings generated with scons, I also want to clarify that I have this project running in VScode, but there seems to be a strange bug with Visual Studio.
 
-![01_ErrorVisualStudioGDExtension](01_ErrorVisualStudioGDExtension.png)
-![02_ErrorVisualStudioGDExtension](02_ErrorVisualStudioGDExtension.png)
 ![03_ErrorVisualStudioGDExtension](03_ErrorVisualStudioGDExtension.png)
+![02_ErrorVisualStudioGDExtension](02_ErrorVisualStudioGDExtension.png)
 ![04_ErrorVisualStudioGDExtension](04_ErrorVisualStudioGDExtension.png)
+![01_ErrorVisualStudioGDExtension](01_ErrorVisualStudioGDExtension.png)
 
 # The visual studio configurations are as follows.
 
@@ -32,6 +32,10 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 * Library Directoria path to the preconfigured binding that is in Godot-cpp/bin
 
 ![05_configuration](05_configuration.png)
+
+
+
+
 
 
 # ERROR DETAILS
