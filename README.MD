@@ -16,7 +16,9 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 
 
 
-# Build started at 11:07...
+# ERROR DETAILS
+
+Build started at 11:07...
 
 1>------ Build started: Project: GDExtensionVS, Configuration: Debug x64 ------
 1>C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
