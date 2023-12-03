@@ -6,6 +6,7 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 ![01_ErrorVisualStudioGDExtension](01_ErrorVisualStudioGDExtension.png)
 ![02_ErrorVisualStudioGDExtension](02_ErrorVisualStudioGDExtension.png)
 ![03_ErrorVisualStudioGDExtension](03_ErrorVisualStudioGDExtension.png)
+![04_ErrorVisualStudioGDExtension](04_ErrorVisualStudioGDExtension.png)
 
 # The visual studio configurations are as follows.
 
