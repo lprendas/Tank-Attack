@@ -21,6 +21,14 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 * Dynamic Library (.dll) configuration type
 * C++ Language Standart C++ 17
 
+
+# Debugging
+![12_configuration](02_configuration.png)
+
+* Command "You have to add the path to the Godot executable"
+* Working Directory "You have to add the path to the Godot project, by default the main scene will be executed"
+
+
 # VCC Directories
 
 ![03_configuration](03_configuration.png)
@@ -69,8 +77,11 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 ![11_configuration](11_configuration.png)
 
 
-# ----------------------------------------------
+# --------------------------------------------------------------------------------------------
 
+# Overview of all include folders from VScode
+
+# --------------------------------------------------------------------------------------------
 
 # ERROR DETAILS
 
