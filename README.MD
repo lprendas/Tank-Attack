@@ -46,12 +46,30 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 
 ## General
 
+* Additional Library
+
 ![07_configuration](07_configuration.png)
 
-* Additional Library Directories Again you add the Library Directoria path to the preconfigured binding that is in Godot-cpp/bin
+* Directories Again you add the Library Directoria path to the preconfigured binding that is in Godot-cpp/bin
 
 ![08_configuration](08_configuration.png)
 
+## Input
+
+* Additional Dependencies
+
+![09_configuration](09_configuration.png)
+
+* Here you have to add the name of the binding generated from godot-cpp that is located within the godot-cpp/bin folder
+
+
+
+
+
+
+
+# ----------------------------------------------
+# ----------------------------------------------
 
 # ERROR DETAILS
 
