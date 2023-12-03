@@ -10,8 +10,15 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 
 # The visual studio configurations are as follows.
 
+## In the project properties
+![01_configuration](01_configuration.png)
 
+## In General
 
+* output directory goes to the location where the dll is compiled
+* dll configuration type
+* C++ Language Standart C++ 17
+![02_configuration](02_configuration.png)
 
 
 
