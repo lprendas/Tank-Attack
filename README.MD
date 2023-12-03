@@ -13,14 +13,20 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 ## In the project properties
 ![01_configuration](01_configuration.png)
 
-## In General
+## General
 
-* output directory goes to the location where the dll is compiled
-* dll configuration type
-* C++ Language Standart C++ 17
 ![02_configuration](02_configuration.png)
 
+* output directory goes to the location where the dll is compiled
+* Dynamic Library (.dll) configuration type
+* C++ Language Standart C++ 17
 
+## VCC Directories
+
+![02_configuration](02_configuration.png)
+
+* Include Directories the paths go to the bookstore
+* Library Directoria path to the preconfigured binding that is in Godot-cpp/bin
 
 
 # ERROR DETAILS
