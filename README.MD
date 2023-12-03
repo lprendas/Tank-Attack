@@ -23,10 +23,15 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 
 ## VCC Directories
 
-![02_configuration](03_configuration.png)
+![03_configuration](03_configuration.png)
 
 * Include Directories the paths go to the bookstore
+
+![04_configuration](04_configuration.png)
+
 * Library Directoria path to the preconfigured binding that is in Godot-cpp/bin
+
+![05_configuration](05_configuration.png)
 
 
 # ERROR DETAILS
