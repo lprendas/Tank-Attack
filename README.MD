@@ -83,7 +83,11 @@ The project compiles, it even opens Godot Engine in debug mode, but there seems 
 
 # --------------------------------------------------------------------------------------------
 
-# Overview of all include folders from VScode
+## Overview of all include folders from VScode
+![14_configuration](14_configuration.png)
+
+## general location of the project
+![15_configuration](15_configuration.png)
 
 # --------------------------------------------------------------------------------------------
 
