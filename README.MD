@@ -1,4 +1,4 @@
-# GODOT ENGINE 4.2 
+# GODOT ENGINE 4.2 Visual Studio 2022 GDExtension C++
 
 # Here are all the steps in a single Comment.
 
