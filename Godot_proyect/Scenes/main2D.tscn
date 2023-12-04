@@ -13,7 +13,8 @@ position = Vector2(275, 129)
 scale = Vector2(0.62, 0.62)
 texture = ExtResource("3_5imj8")
 
-[node name="GDExample" type="Sprite2D" parent="."]
+[node name="GDExample" type="GDExample" parent="."]
+amplitude = 10.0
 position = Vector2(270, 136)
 texture = ExtResource("1_m220b")
 
@@ -21,5 +22,7 @@ texture = ExtResource("1_m220b")
 script = ExtResource("2_gk0m7")
 
 [node name="main3D" parent="." instance=ExtResource("4_qk7b3")]
+
+[node name="VSTestGDnative" type="VSTestGDnative" parent="."]
 
 [editable path="main3D"]

@@ -21,12 +21,24 @@
     <ClCompile Include="register_types.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="CuboExample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GDExample.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="VSTestGDnative.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="register_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CuboExample.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GDExample.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

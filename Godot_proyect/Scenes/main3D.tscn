@@ -125,7 +125,7 @@ environment = SubResource("Environment_4ww7c")
 transform = Transform3D(-0.782295, 0.550697, -0.291113, -0.0598857, 0.398689, 0.915129, 0.620023, 0.733334, -0.278914, 0, 3.64791, 0)
 shadow_enabled = true
 
-[node name="Cubo_example" type="MeshInstance3D" parent="Control/SubViewportContainer/SubViewport"]
+[node name="Cubo_example" type="CuboExample" parent="Control/SubViewportContainer/SubViewport"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11967, 1, 0.077836)
 mesh = SubResource("ArrayMesh_kcpvt")
 skeleton = NodePath("")
