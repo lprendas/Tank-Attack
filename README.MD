@@ -113,4 +113,7 @@ https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/gdextensi
 ![Captura de pantalla 2023-12-04 144410](https://github.com/godotengine/godot-cpp/assets/12847027/c652f865-1796-4f12-be06-741059ced850)
 
 
+# Visual Studio 2022 stable, Python, Scons, windows 11
+
+![Visual-Studio-2022-stable-Python-Scons-windows-11](https://gitlab.com/kone9/gdextension-visual-studio-windows-bug-lib/-/raw/main/17_configuration.png)
 
