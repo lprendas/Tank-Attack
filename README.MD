@@ -10,7 +10,7 @@ As the precompiled libraries are already in the project, you do not need to down
 ![Visual_studio_compiler_gdnative](https://gitlab.com/kone9/godot-engine-4.2-template-gdextension-with-vscode-windows-11/-/raw/main/01_instalacionVisualStudio.png)
 
 
-# z------------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------
 
 # ----->This is the configuration of this project.<-----
 
