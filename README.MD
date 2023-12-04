@@ -1,212 +1,94 @@
-# All the errors in this branch were solved, however I leave it like this so that it remains as a memory.
+# GODOT ENGINE 4.2 
 
-# GODOT ENGINE 4.2 GDextension BUG with Visual Studio 2022 DLL library
+# Here are all the steps in a single Comment.
 
-The project compiles, it even opens Godot Engine in debug mode, but there seems to be a problem with the bindings generated with scons, I also want to clarify that I have this project running in VScode, but there seems to be a strange bug with Visual Studio.
+![01_logo](https://github.com/godotengine/godot-cpp/assets/12847027/4b515778-d07a-4cb4-a618-e13af3d7dba7)
 
-![03_ErrorVisualStudioGDExtension](03_ErrorVisualStudioGDExtension.png)
-![02_ErrorVisualStudioGDExtension](02_ErrorVisualStudioGDExtension.png)
-![04_ErrorVisualStudioGDExtension](04_ErrorVisualStudioGDExtension.png)
-![01_ErrorVisualStudioGDExtension](01_ErrorVisualStudioGDExtension.png)
+To generate the visual studio compatible static libraries that are saved in godot-cpp/bin use the following scons command.
 
-# The visual studio configurations are as follows.
+## lib debug:
+`scons platform=windows custom_api_file="gdextension\extension_api.json" target=template_debug optimize=debug debug_symbols=yes`
 
-# In the project properties
-![01_configuration](01_configuration.png)
+## lib release
+`scons platform=windows custom_api_file="gdextension\extension_api.json" target=template_release optimize=speed debug_symbols=yes
+`
+
+Note that extension_api.json in godot-cpp 4.2 is located inside gdextension\extension_api.json.
+
+Pay attention to the location of "extension_api.json"
+
+![Captura de pantalla 2023-12-04 142631](https://github.com/godotengine/godot-cpp/assets/12847027/f9ab7d5a-fd47-42cf-b933-ab0365b2152c)
+
+
+# Then in the project properties you have to add the following settings
+![Captura de pantalla 2023-12-04 115832](https://github.com/godotengine/godot-cpp/assets/12847027/821b2ca9-88b2-477c-9889-e38e563b5541)
 
 # General
 
-![02_configuration](02_configuration.png)
-
 * directory goes to the location where the dll is compiled, that is, inside the game project directory, this is the dll that works with GDextension
+* add this name to the dll that exits visual studio libgdexample.windows.template_debug.x86_64
 * Dynamic Library (.dll) configuration type
 * C++ Language Standart C++ 17
 
+![Captura de pantalla 2023-12-04 133531](https://github.com/godotengine/godot-cpp/assets/12847027/bc5b347f-5a67-4b39-9c10-ef12f87db8f6)
 
 # Debugging
-![12_configuration](12_configuration.png)
 
 * Command "You have to add the path to the Godot executable"
 * Working Directory "You have to add the path to the Godot project, by default the main scene will be executed"
-
 * Command Arguments Alternatively you can add command arguments such as "--editor" to run the editor instead of the game within visual studio, you can create different configurations within the editor.
 
-![13_configuration](13_configuration.png)
+![debugging](https://github.com/godotengine/godot-cpp/assets/12847027/0b6033ec-a1db-45de-a3f4-ed4cf2b9eaf3)
 
-* In this project the two configurations are added
-![16_configuration](16_configuration.png)
+![debugging_02](https://github.com/godotengine/godot-cpp/assets/12847027/2c8ab9da-5411-45ae-a26b-7b9f445c45d1)
+
 
 # VCC Directories
 
-![03_configuration](03_configuration.png)
-
 * Include Directories the paths go to the bookstore
-
-![04_configuration](04_configuration.png)
-
 * Library Directoria path to the preconfigured binding that is in Godot-cpp/bin
-
-![05_configuration](05_configuration.png)
+![03_configuration](https://github.com/godotengine/godot-cpp/assets/12847027/4832cbc8-9ec9-45f0-a536-7087330aaf8c)
+![04_configuration](https://github.com/godotengine/godot-cpp/assets/12847027/15a7019f-51bb-4ade-966d-7a4315556f79)
+![05_configuration](https://github.com/godotengine/godot-cpp/assets/12847027/78899e72-3b58-42af-8aa9-cb722d45bfdc)
 
 
 # C/C++
 
+## Preprocessor
+
+* in preprocessor definitions add "WIN64" "TYPED_METHOD_BIND"  "NOMINMAX" " _CONSOLE"
+
+![Captura de pantalla 2023-12-04 140752](https://github.com/godotengine/godot-cpp/assets/12847027/3fc29c41-8e2e-4a73-9690-b0a9cab4f2e6)
+![Captura de pantalla 2023-12-04 140904](https://github.com/godotengine/godot-cpp/assets/12847027/e96b72f6-573b-4849-8b5f-4cfbb420d623)
+
+
 ## Code Generation
 
-* Runtime Library Multi-treaded Debug DLL(/MDd)
-![06_configuration](06_configuration.png)
+* Runtime Library Multi-treaded (/MT)
+![Captura de pantalla 2023-12-04 141342](https://github.com/godotengine/godot-cpp/assets/12847027/ff0ec031-79a9-46ea-9d2c-2729bc5eb84e)
 
 
 # Linker
 
 ## General
 
-* Additional Library
-
-![07_configuration](07_configuration.png)
-
-* Directories Again you add the Library Directoria path to the preconfigured binding that is in Godot-cpp/bin
-
-![08_configuration](08_configuration.png)
+* "Additional Library Directories" Again you add the Library Directoria path to the preconfigured binding that is in Godot-cpp/bin
+![07_configuration](https://github.com/godotengine/godot-cpp/assets/12847027/1cbc9d53-bc87-48f6-891f-218c0c309674)
+![08_configuration](https://github.com/godotengine/godot-cpp/assets/12847027/291dab2f-199c-4b54-938f-e39f66ff9f35)
 
 ## Input
 
-* Additional Dependencies
-
-![09_configuration](09_configuration.png)
-
-* Here you have to add the name of the binding generated from godot-cpp that is located within the godot-cpp/bin folder
-
-![10_configuration](10_configuration.png)
-
-* If we open the project folder with VScode you can see where the precompiled binding is located within Godot-cpp and there we can obtain its name, path or whatever
-
-![11_configuration](11_configuration.png)
+* "Additional Dependencies" Here you have to add the name of the binding generated from godot-cpp that is located within the godot-cpp/bin folder
+![09_configuration](https://github.com/godotengine/godot-cpp/assets/12847027/8a1e63f8-ba6a-43b5-b4a0-26423cabc41c)
+![10_configuration](https://github.com/godotengine/godot-cpp/assets/12847027/86515a1a-afdc-4758-98b6-02843fcefc2c)
+ 
 
 
-# --------------------------------------------------------------------------------------------
+# Don't forget the "gdexample.gdextension" that goes inside the godot project and generates that link between gdextension and godot. Anyway, check the official GDextension documentation.
 
-## Overview of all include folders from VScode
-![14_configuration](14_configuration.png)
+https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/gdextension_cpp_example.html
 
-## general location of the project
-![15_configuration](15_configuration.png)
-
-# --------------------------------------------------------------------------------------------
-
-# ERROR DETAILS
-
-Build started at 11:07...
-
-1>------ Build started: Project: GDExtensionVS, Configuration: Debug x64 ------
-1>C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\Microsoft.CppBuild.targets(517,5): warning MSB8004: Output Directory does not end with a trailing slash.  This build instance will add the slash as it is required to allow proper evaluation of the Output Directory.
-1>libgodot-cpp.windows.template_debug.x86_64.lib(error_macros.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(error_macros.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(godot.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(godot.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(memory.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(memory.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(string.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(string.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(char_string.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(char_string.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(string_name.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(string_name.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(wrapped.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(wrapped.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(class_db.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(class_db.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(node.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(node.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(editor_plugin_registration.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(editor_plugin_registration.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(variant.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(variant.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_byte_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_byte_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_float64_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_float64_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_string_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_string_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(node_path.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(node_path.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(object.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(object.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(method_bind.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(method_bind.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(class_db_singleton.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(class_db_singleton.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_arrays.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_arrays.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(object.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(object.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(ref_counted.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(ref_counted.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(resource.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(resource.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(main_loop.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(main_loop.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(window.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(window.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_vector2_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_vector2_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_vector3_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_vector3_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(projection.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(projection.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(rid.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(rid.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(callable.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(callable.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(signal.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(signal.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(dictionary.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(dictionary.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_int32_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_int32_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_int64_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_int64_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_float32_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_float32_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_color_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(packed_color_array.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(style_box.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(style_box.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(texture2d.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(texture2d.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(plane.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(plane.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(basis.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(basis.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(canvas_item.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(canvas_item.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(vector3.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(vector3.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(quaternion.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(quaternion.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(material.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(material.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(mesh.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for '_ITERATOR_DEBUG_LEVEL': value '0' doesn't match value '2' in register_types.obj
-1>libgodot-cpp.windows.template_debug.x86_64.lib(mesh.windows.template_debug.x86_64.obj) : error LNK2038: mismatch detected for 'RuntimeLibrary': value 'MT_StaticRelease' doesn't match value 'MTd_StaticDebug' in register_types.obj
-1>   Creating library .\Godot_proyect\bin\GDExtensionVS.lib and object .\Godot_proyect\bin\GDExtensionVS.exp
-1>register_types.obj : error LNK2019: unresolved external symbol _CrtDbgReport referenced in function "void * __cdecl std::_Allocate_manually_vector_aligned<struct std::_Default_allocate_traits>(unsigned __int64)" (??$_Allocate_manually_vector_aligned@U_Default_allocate_traits@std@@@std@@YAPEAX_K@Z)
-1>.\Godot_proyect\bin\GDExtensionVS.dll : fatal error LNK1120: 1 unresolved externals
-1>Done building project "GDExtensionVS.vcxproj" -- FAILED.
-========== Build: 0 succeeded, 1 failed, 0 up-to-date, 0 skipped ==========
-========== Build completed at 11:07 and took 02,300 seconds ==========
+![Captura de pantalla 2023-12-04 144410](https://github.com/godotengine/godot-cpp/assets/12847027/c652f865-1796-4f12-be06-741059ced850)
 
 
-# To try this project make sure you have Visual Studio 2022 stable, Python, Scons and MVSC installed correctly on your Windows 11 PC
-
-![17_configuration](17_configuration.png)
-
-
-
-
-# I leave links to two preconfigured Vscode projects working correctly.
-https://gitlab.com/kone9/godot-engine-4.2-template-gdextension-with-vscode-windows-11
-
-https://gitlab.com/kone9/godot-engine-4.2-template-gdextension-with-vscode
 
