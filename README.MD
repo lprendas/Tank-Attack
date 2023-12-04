@@ -1,5 +1,6 @@
-# GODOT ENGINE 4.2 GDextension BUG with Visual Studio 2022 DLL library
+# All the errors in this branch were solved, however I leave it like this so that it remains as a memory.
 
+# GODOT ENGINE 4.2 GDextension BUG with Visual Studio 2022 DLL library
 
 The project compiles, it even opens Godot Engine in debug mode, but there seems to be a problem with the bindings generated with scons, I also want to clarify that I have this project running in VScode, but there seems to be a strange bug with Visual Studio.
 
