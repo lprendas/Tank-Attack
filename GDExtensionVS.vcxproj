@@ -132,7 +132,7 @@
     <TargetName>libgdexample.windows.template_debug.x86_64</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Game_Debug_Godot|x64'">
-    <OutDir>.\Godot_proyect\bin</OutDir>
+    <OutDir>.\Godot_proyect\bin\</OutDir>
     <IncludePath>C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\gdextension;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\gen\include;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\gen\include\godot_cpp;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\gen\include\godot_cpp\classes;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\gen\include\godot_cpp\core;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\gen\include\godot_cpp\variant;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\include;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\include\godot_cpp;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\include\godot_cpp\classes;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\include\godot_cpp\core;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\include\godot_cpp\templates;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\include\godot_cpp\variant;$(IncludePath)</IncludePath>
     <LibraryPath>C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\bin;$(LibraryPath)</LibraryPath>
     <TargetName>libgdexample.windows.template_debug.x86_64</TargetName>
