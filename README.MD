@@ -19,8 +19,10 @@ Overlap options
 
 
 # -----------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------
+# -----------------------------------------------------------------------------------------
 
-# ----->This is the configuration of this project.<-----
+# --------------->  This is the configuration of this project <---------------
 
 The configuration of the entire project is documented below, but don't worry, you don't need to do it, just download the project. However, if you want to know how I did it, I leave it documented below.
 
