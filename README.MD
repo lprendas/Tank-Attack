@@ -1,7 +1,10 @@
 # GODOT ENGINE 4.2 - GDExtension C++ - Visual Studio 2022 - MSVC
 
 ![01_logo](https://github.com/godotengine/godot-cpp/assets/12847027/4b515778-d07a-4cb4-a618-e13af3d7dba7)
+
 ![Captura de pantalla 2023-12-04 185606](https://github.com/godotengine/godot-cpp/assets/12847027/31a43d24-2c1c-4c8c-91e1-ea20bfdd3567)
+
+![Captura de pantalla 2023-12-04 191624](https://github.com/godotengine/godot-cpp/assets/12847027/bd4e618c-054c-4e33-a941-c7f5e42fda21)
 
 # Downloadable template project
 
