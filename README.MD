@@ -1,8 +1,15 @@
-# GODOT ENGINE 4.2 Visual Studio 2022 GDExtension C++
-
-# Here are all the steps in a single Comment.
+# GODOT ENGINE 4.2 - GDExtension C++ - Visual Studio 2022 - MSVC
 
 ![01_logo](https://github.com/godotengine/godot-cpp/assets/12847027/4b515778-d07a-4cb4-a618-e13af3d7dba7)
+
+# Downloadable template project
+
+This is a visual studio community version stable template preconfigured with godot engine GDExtension C++ so you just have to download the repository and easily use GDExtension C++ with Godot Engine.
+As the precompiled libraries are already in the project, you do not need to download SCONS, however make sure you have the C++ and .net compilers installed in visual studio. I leave a screenshot of the necessary visual studio 2022 tools so you just have to press F5 and run Godot Engine with everything included
+
+![Visual_studio_compiler_gdnative](https://gitlab.com/kone9/godot-engine-4.2-template-gdextension-with-vscode-windows-11/-/raw/main/01_instalacionVisualStudio.png)
+
+# This is the configuration of this project.
 
 To generate the visual studio compatible static libraries that are saved in godot-cpp/bin use the following scons command.
 
