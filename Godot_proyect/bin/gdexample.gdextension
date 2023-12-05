@@ -1,8 +1,7 @@
 [icons]
 
-GDExample = "res://IconsGDExtension/gd_example.svg"
-CuboExample = "res://IconsGDExtension/GDextensionLogo.png"
-
+GDExample = "res://bin/GDExtension_icons_textures/gd_example.svg"
+CuboExample = "res://bin/GDExtension_icons_textures/GDextensionLogo.png"
 
 [configuration]
 
