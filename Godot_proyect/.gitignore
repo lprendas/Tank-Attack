@@ -14,12 +14,14 @@ export_presets.cfg
 data_*/
 mono_crash.*.json
 
-#ignore
-#!/bin/gdicons/*.svg
-#!/bin/gdicons/*.png
-#!/bin/gdicons/*.jpg
 
-#!/bin/gd_icons/
-
-#!/bin/
-#C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\Godot_proyect\bin\gd_icons
+#godot bin GDextension ignores
+!/bin/
+~libgdexample.windows.template_debug.x86_64.dll
+libgdexample.windows.template_debug.x86_64.dll
+libgdexample.windows.template_debug.x86_64.lib
+libgdexample.windows.template_debug.x86_64.exp
+libgdexample.windows.template_release.x86_64.pdb
+libgdexample.windows.template_release.x86_64.lib
+libgdexample.windows.template_release.x86_64.exp
+libgdexample.windows.template_release.x86_64.dll

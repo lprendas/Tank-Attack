@@ -14,5 +14,5 @@ config/name="VisualStudio_GDextension_4_2"
 config/description="a preconfigured project with Godot Engine C++ using GDextension."
 run/main_scene="res://Scenes/main2D.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
-boot_splash/image="res://gdextension_icons/RunGameLogo.png"
-config/icon="res://gdextension_icons/GDextensionLogo.png"
+boot_splash/image="res://bin/gdextension_icons/RunGameLogo.png"
+config/icon="res://bin/gdextension_icons/GDextensionLogo.png"
