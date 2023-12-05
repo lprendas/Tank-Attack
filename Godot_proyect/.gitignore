@@ -13,3 +13,13 @@ export_presets.cfg
 .mono/
 data_*/
 mono_crash.*.json
+
+#ignore
+#!/bin/gdicons/*.svg
+#!/bin/gdicons/*.png
+#!/bin/gdicons/*.jpg
+
+#!/bin/gd_icons/
+
+#!/bin/
+#C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\Godot_proyect\bin\gd_icons
