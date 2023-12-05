@@ -1,3 +1,9 @@
+[icons]
+
+GDExample = "res://icons/gd_example.svg"
+CuboExample = "res://Textures/GDextensionLogo.png"
+
+
 [configuration]
 
 entry_symbol = "example_library_init"
@@ -5,25 +11,29 @@ compatibility_minimum = "4.2"
 
 [libraries]
 
-macos.debug = "res://bin/libgdexample.macos.template_debug.framework"
-macos.release = "res://bin/libgdexample.macos.template_release.framework"
-windows.debug.x86_32 = "res://bin/libgdexample.windows.template_debug.x86_32.dll"
-windows.release.x86_32 = "res://bin/libgdexample.windows.template_release.x86_32.dll"
 windows.debug.x86_64 = "res://bin/libgdexample.windows.template_debug.x86_64.dll"
 windows.release.x86_64 = "res://bin/libgdexample.windows.template_release.x86_64.dll"
-linux.debug.x86_64 = "res://bin/libgdexample.linux.template_debug.x86_64.so"
-linux.release.x86_64 = "res://bin/libgdexample.linux.template_release.x86_64.so"
-linux.debug.arm64 = "res://bin/libgdexample.linux.template_debug.arm64.so"
-linux.release.arm64 = "res://bin/libgdexample.linux.template_release.arm64.so"
-linux.debug.rv64 = "res://bin/libgdexample.linux.template_debug.rv64.so"
-linux.release.rv64 = "res://bin/libgdexample.linux.template_release.rv64.so"
+
+windows.debug.x86_32 = "res://bin/libgdexample.windows.template_debug.x86_32.dll"
+windows.release.x86_32 = "res://bin/libgdexample.windows.template_release.x86_32.dll"
+
 android.debug.x86_64 = "res://bin/libgdexample.android.template_debug.x86_64.so"
 android.release.x86_64 = "res://bin/libgdexample.android.template_release.x86_64.so"
+
 android.debug.arm64 = "res://bin/libgdexample.android.template_debug.arm64.so"
 android.release.arm64 = "res://bin/libgdexample.android.template_release.arm64.so"
 
+linux.debug.x86_64 = "res://bin/libgdexample.linux.template_debug.x86_64.so"
+linux.release.x86_64 = "res://bin/libgdexample.linux.template_release.x86_64.so"
 
-[icons]
+linux.debug.arm64 = "res://bin/libgdexample.linux.template_debug.arm64.so"
+linux.release.arm64 = "res://bin/libgdexample.linux.template_release.arm64.so"
 
-GDExample = "res://icons/gd_example.svg"
-CuboExample = "res://Textures/GDextensionLogo.png"
+linux.debug.rv64 = "res://bin/libgdexample.linux.template_debug.rv64.so"
+linux.release.rv64 = "res://bin/libgdexample.linux.template_release.rv64.so"
+
+macos.debug = "res://bin/libgdexample.macos.template_debug.framework"
+macos.release = "res://bin/libgdexample.macos.template_release.framework"
+
+
+
