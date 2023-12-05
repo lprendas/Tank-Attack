@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bq0mkysru3jwn"
-path="res://.godot/imported/RunGameLogo.png-331135167ea26d633090eca616247500.ctex"
+uid="uid://dng7aa58mxjpl"
+path="res://.godot/imported/GDextensionLogo.png-b05a72782fd5cec13172b83d48d05715.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/RunGameLogo.png"
-dest_files=["res://.godot/imported/RunGameLogo.png-331135167ea26d633090eca616247500.ctex"]
+source_file="res://GDExtension_icons/GDextensionLogo.png"
+dest_files=["res://.godot/imported/GDextensionLogo.png-b05a72782fd5cec13172b83d48d05715.ctex"]
 
 [params]
 
