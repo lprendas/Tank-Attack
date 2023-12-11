@@ -127,11 +127,12 @@ Pay attention to the location of "extension_api.json"
  
 
 
-# Don't forget the "gdexample.gdextension" that goes inside the godot project and generates that link between gdextension and godot. Anyway, check the official GDextension documentation.
-
+# Don't forget the "gdexample.gdextension" that goes inside the godot project and generates that link between gdextension and godot.
+Also very important to set the property [configuration] `reloadable = true` so that when creating signals you do not have to restart the editor.
+Anyway, check out the official GDextension documentation.
 https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/gdextension_cpp_example.html
 
-![Captura de pantalla 2023-12-04 144410](https://github.com/godotengine/godot-cpp/assets/12847027/c652f865-1796-4f12-be06-741059ced850)
+![Captura de pantalla 2023-12-10 222053](https://github.com/godotengine/godot-cpp/assets/12847027/0126823d-744e-40eb-9243-4431233c75e6)
 
 
 # Visual Studio 2022 stable, Python, Scons, windows 11
