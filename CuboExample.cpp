@@ -34,7 +34,10 @@ void CuboExample::_bind_methods()
 void CuboExample::_ready()
 {
     if (Engine::get_singleton()->is_editor_hint()) return;
-    UtilityFunctions::print("hola mundo");
+    UtilityFunctions::print("hola mundo Godot 3D");
+    
+   
+    
 }
 
 void CuboExample::_process(double delta)

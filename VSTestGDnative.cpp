@@ -25,10 +25,10 @@ void VSTestGDnative::_ready()
 {
 	if (Engine::get_singleton()->is_editor_hint()) return;
 
+	/*UtilityFunctions::print("hola mundo  visual studio");
 	UtilityFunctions::print("hola mundo  visual studio");
 	UtilityFunctions::print("hola mundo  visual studio");
-	UtilityFunctions::print("hola mundo  visual studio");
-	UtilityFunctions::print("hola mundo  visual studio");
+	UtilityFunctions::print("hola mundo  visual studio");*/
 	
 }
 
