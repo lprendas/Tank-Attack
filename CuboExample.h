@@ -5,6 +5,7 @@
 
 #include <mesh_instance3d.hpp>
 
+#include <packed_scene.hpp>
 
 namespace godot {
 
@@ -26,7 +27,16 @@ namespace godot {
 
         void _ready() override;
 
+
+
+    //EXPORT
+    private:
         float velocityRotation{ 1 };
+       
+        
+
+
+
 
     };
 

@@ -97,10 +97,12 @@ Pay attention to the location of "extension_api.json"
 
 ## Preprocessor
 
-* in preprocessor definitions add "WIN64" "TYPED_METHOD_BIND"  "NOMINMAX" " _CONSOLE"
+* in preprocessor definitions add `WIN64` `TYPED_METHOD_BIND`  `NOMINMAX` `HOT_RELOAD_ENABLED`  `_CONSOLE`
 
-![Captura de pantalla 2023-12-04 140752](https://github.com/godotengine/godot-cpp/assets/12847027/3fc29c41-8e2e-4a73-9690-b0a9cab4f2e6)
-![Captura de pantalla 2023-12-04 140904](https://github.com/godotengine/godot-cpp/assets/12847027/e96b72f6-573b-4849-8b5f-4cfbb420d623)
+![Captura de pantalla 2023-12-10 220442](https://github.com/godotengine/godot-cpp/assets/12847027/c9c83b32-5d4b-4f33-aa14-0299cb17c459)
+
+![Captura de pantalla 2023-12-10 220703](https://github.com/godotengine/godot-cpp/assets/12847027/5abdd7c9-c58b-49b8-98aa-9a0fa6fdfac8)
+
 
 
 ## Code Generation

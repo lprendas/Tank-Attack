@@ -1,5 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://cv5bo45dh8x3x"]
+[gd_scene load_steps=10 format=3 uid="uid://cv5bo45dh8x3x"]
 
+[ext_resource type="AudioStream" uid="uid://dmfdp14vsqeua" path="res://musicSFX/Zombie001_Attack_A_001.ogg" id="3_wta03"]
 [ext_resource type="Shader" uid="uid://0ijceipblevi" path="res://Escenes_Blender/shaders/main3D.tres" id="4_gp1vh"]
 
 [sub_resource type="PhysicalSkyMaterial" id="PhysicalSkyMaterial_styxy"]
@@ -129,3 +130,6 @@ shadow_enabled = true
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.11967, 1, 0.077836)
 mesh = SubResource("ArrayMesh_kcpvt")
 skeleton = NodePath("")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Control/SubViewportContainer/SubViewport/Cubo_example"]
+stream = ExtResource("3_wta03")
