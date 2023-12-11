@@ -88,8 +88,11 @@ Pay attention to the location of "extension_api.json"
 
 * Include Directories the paths go to the bookstore
 * Library Directoria path to the preconfigured binding that is in Godot-cpp/bin
+
 ![03_configuration](https://github.com/godotengine/godot-cpp/assets/12847027/4832cbc8-9ec9-45f0-a536-7087330aaf8c)
+
 ![04_configuration](https://github.com/godotengine/godot-cpp/assets/12847027/15a7019f-51bb-4ade-966d-7a4315556f79)
+
 ![05_configuration](https://github.com/godotengine/godot-cpp/assets/12847027/78899e72-3b58-42af-8aa9-cb722d45bfdc)
 
 
