@@ -132,6 +132,8 @@ Also very important to set the property [configuration] `reloadable = true` so t
 Anyway, check out the official GDextension documentation.
 https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/gdextension_cpp_example.html
 
+![Captura de pantalla 2023-12-10 215222](https://github.com/godotengine/godot-cpp/assets/12847027/b87d55f9-3d8b-4a01-ab7d-41cd6390a446)
+
 ![Captura de pantalla 2023-12-10 222053](https://github.com/godotengine/godot-cpp/assets/12847027/0126823d-744e-40eb-9243-4431233c75e6)
 
 
