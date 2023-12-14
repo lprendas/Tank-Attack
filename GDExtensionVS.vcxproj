@@ -9,28 +9,12 @@
       <Configuration>Editor_Debug_Godot</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Editor_Release_Godot|Win32">
-      <Configuration>Editor_Release_Godot</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Editor_Release_Godot|x64">
-      <Configuration>Editor_Release_Godot</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
     <ProjectConfiguration Include="Game_Debug_Godot|Win32">
       <Configuration>Game_Debug_Godot</Configuration>
       <Platform>Win32</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Game_Debug_Godot|x64">
       <Configuration>Game_Debug_Godot</Configuration>
-      <Platform>x64</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Game_Release_Godot|Win32">
-      <Configuration>Game_Release_Godot</Configuration>
-      <Platform>Win32</Platform>
-    </ProjectConfiguration>
-    <ProjectConfiguration Include="Game_Release_Godot|x64">
-      <Configuration>Game_Release_Godot</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
@@ -54,18 +38,6 @@
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Game_Release_Godot|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Editor_Release_Godot|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Editor_Debug_Godot|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
@@ -73,18 +45,6 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Game_Debug_Godot|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Game_Release_Godot|x64'" Label="Configuration">
-    <ConfigurationType>DynamicLibrary</ConfigurationType>
-    <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
-    <CharacterSet>Unicode</CharacterSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Editor_Release_Godot|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
@@ -101,22 +61,10 @@
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Game_Debug_Godot|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Game_Release_Godot|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Editor_Release_Godot|Win32'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Editor_Debug_Godot|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Game_Debug_Godot|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Game_Release_Godot|x64'" Label="PropertySheets">
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-  </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Editor_Release_Godot|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
@@ -127,22 +75,10 @@
     <TargetName>libgdexample.windows.template_debug.x86_64</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Game_Debug_Godot|x64'">
-    <OutDir>.\Godot_proyect\bin\</OutDir>
-    <IncludePath>godot-cpp\gdextension;godot-cpp\gen\include;godot-cpp\gen\include\godot_cpp;godot-cpp\gen\include\godot_cpp\classes;godot-cpp\gen\include\godot_cpp\core;godot-cpp\gen\include\godot_cpp\variant;godot-cpp\include;godot-cpp\include\godot_cpp;godot-cpp\include\godot_cpp\classes;godot-cpp\include\godot_cpp\core;godot-cpp\include\godot_cpp\templates;godot-cpp\include\godot_cpp\variant;$(IncludePath)</IncludePath>
-    <LibraryPath>godot-cpp\bin;$(LibraryPath)</LibraryPath>
+    <OutDir>$(ProjectDir)Godot_proyect\bin\</OutDir>
+    <IncludePath>$(ProjectDir)godot-cpp\gdextension;$(ProjectDir)godot-cpp\gen\include;$(ProjectDir)godot-cpp\gen\include\godot_cpp;$(ProjectDir)godot-cpp\gen\include\godot_cpp\classes;$(ProjectDir)godot-cpp\gen\include\godot_cpp\core;$(ProjectDir)godot-cpp\gen\include\godot_cpp\variant;$(ProjectDir)godot-cpp\include;$(ProjectDir)godot-cpp\include\godot_cpp;$(ProjectDir)godot-cpp\include\godot_cpp\classes;$(ProjectDir)godot-cpp\include\godot_cpp\core;$(ProjectDir)godot-cpp\include\godot_cpp\templates;$(ProjectDir)godot-cpp\include\godot_cpp\variant;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)godot-cpp\bin;$(LibraryPath)</LibraryPath>
     <TargetName>libgdexample.windows.template_debug.x86_64</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Game_Release_Godot|x64'">
-    <OutDir>.\Godot_proyect\bin\</OutDir>
-    <IncludePath>godot-cpp\gdextension;godot-cpp\gen\include;godot-cpp\gen\include\godot_cpp;godot-cpp\gen\include\godot_cpp\classes;godot-cpp\gen\include\godot_cpp\core;godot-cpp\gen\include\godot_cpp\variant;godot-cpp\include;godot-cpp\include\godot_cpp;godot-cpp\include\godot_cpp\classes;godot-cpp\include\godot_cpp\core;godot-cpp\include\godot_cpp\templates;godot-cpp\include\godot_cpp\variant;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\bin;$(LibraryPath)</LibraryPath>
-    <TargetName>libgdexample.windows.template_release.x86_64</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Editor_Release_Godot|x64'">
-    <OutDir>.\Godot_proyect\bin\</OutDir>
-    <IncludePath>C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\gdextension;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\gen\include;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\gen\include\godot_cpp;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\gen\include\godot_cpp\classes;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\gen\include\godot_cpp\core;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\gen\include\godot_cpp\variant;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\include;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\include\godot_cpp;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\include\godot_cpp\classes;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\include\godot_cpp\core;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\include\godot_cpp\templates;C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\include\godot_cpp\variant;$(IncludePath)</IncludePath>
-    <LibraryPath>C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\bin;$(LibraryPath)</LibraryPath>
-    <TargetName>libgdexample.windows.template_release.x86_64</TargetName>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Editor_Debug_Godot|Win32'">
     <ClCompile>
@@ -157,30 +93,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Game_Debug_Godot|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Game_Release_Godot|Win32'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Editor_Release_Godot|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
@@ -212,7 +124,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN64;TYPED_METHOD_BIND;NOMINMAX;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN64;TYPED_METHOD_BIND;NOMINMAX;HOT_RELOAD_ENABLED;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -220,40 +132,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>godot-cpp\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)godot-cpp\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libgodot-cpp.windows.template_debug.x86_64.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Game_Release_Godot|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN64;TYPED_METHOD_BIND;NOMINMAX;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libgodot-cpp.windows.template_release.x86_64.lib;%(AdditionalDependencies)</AdditionalDependencies>
-    </Link>
-  </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Editor_Release_Godot|x64'">
-    <ClCompile>
-      <WarningLevel>Level3</WarningLevel>
-      <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>WIN64;TYPED_METHOD_BIND;NOMINMAX;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard>stdcpp17</LanguageStandard>
-      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
-    </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-      <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\godot-cpp\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>libgodot-cpp.windows.template_release.x86_64.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

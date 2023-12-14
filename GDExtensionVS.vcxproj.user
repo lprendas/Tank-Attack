@@ -12,18 +12,6 @@
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerCommandArguments />
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Game_Release_Godot|x64'">
-    <LocalDebuggerCommand>C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\External_Programs\Godot_Editor\Godot_v4.2-stable_win64.exe</LocalDebuggerCommand>
-    <LocalDebuggerWorkingDirectory>.\Godot_proyect</LocalDebuggerWorkingDirectory>
-    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommandArguments />
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Editor_Release_Godot|x64'">
-    <LocalDebuggerCommand>C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\External_Programs\Godot_Editor\Godot_v4.2-stable_win64.exe</LocalDebuggerCommand>
-    <LocalDebuggerWorkingDirectory>.\Godot_proyect</LocalDebuggerWorkingDirectory>
-    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommandArguments />
-  </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Editor_Debug_Godot|x64'">
     <LocalDebuggerCommand>$(ProjectDir)External_Programs\Godot_Editor\Godot_v4.2.1-stable_win64.exe</LocalDebuggerCommand>
     <LocalDebuggerWorkingDirectory>$(ProjectDir)Godot_proyect</LocalDebuggerWorkingDirectory>
@@ -33,22 +21,12 @@
     <LocalDebuggerDebuggerType>Auto</LocalDebuggerDebuggerType>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Game_Debug_Godot|x64'">
-    <LocalDebuggerCommand>.\External_Programs\Godot_Editor\Godot_v4.2.1-stable_win64.exe</LocalDebuggerCommand>
-    <LocalDebuggerWorkingDirectory>.\Godot_proyect</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerCommand>$(ProjectDir)External_Programs\Godot_Editor\Godot_v4.2.1-stable_win64.exe</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>$(ProjectDir)Godot_proyect</LocalDebuggerWorkingDirectory>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerCommandArguments>
     </LocalDebuggerCommandArguments>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Game_Release_Godot|x64'">
-    <LocalDebuggerCommand>C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\External_Programs\Godot_Editor\Godot_v4.2.1-stable_win64.exe</LocalDebuggerCommand>
-    <LocalDebuggerWorkingDirectory>.\Godot_proyect</LocalDebuggerWorkingDirectory>
-    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommandArguments />
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Editor_Release_Godot|x64'">
-    <LocalDebuggerCommand>C:\Users\ARIEL\Documents\Visual Studio proyectos\GDExtensionVS\External_Programs\Godot_Editor\Godot_v4.2.1-stable_win64.exe</LocalDebuggerCommand>
-    <LocalDebuggerWorkingDirectory>.\Godot_proyect</LocalDebuggerWorkingDirectory>
-    <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
-    <LocalDebuggerCommandArguments>--editor</LocalDebuggerCommandArguments>
+    <LocalDebuggerAttach>false</LocalDebuggerAttach>
+    <LocalDebuggerDebuggerType>Auto</LocalDebuggerDebuggerType>
   </PropertyGroup>
 </Project>
