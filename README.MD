@@ -43,9 +43,10 @@ For development, debug mode compilations are recommended, for final compilations
 
 # --------------->  This is the configuration of this project <---------------
 
-The configuration of the entire project is documented below, but don't worry, you don't need to do it, just download the project. However, if you want to know how I did it, I leave it documented below.
+The setup of the entire project is documented below, but don't worry, you don't have to, just download the project. However, if you want to know how I did it, I'll document it below.
+Keep in mind that although some screenshots of this document show absolute paths, relative paths are used throughout the project so as not to have to reload their location.
 
-To generate the visual studio compatible static libraries that are saved in godot-cpp/bin use the following scons command.
+# To generate the visual studio compatible static libraries that are saved in godot-cpp/bin use the following scons command.
 
 ## lib debug:
 `scons platform=windows custom_api_file="gdextension\extension_api.json" target=template_debug optimize=debug debug_symbols=yes`
