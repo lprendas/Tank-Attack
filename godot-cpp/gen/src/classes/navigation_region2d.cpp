@@ -39,6 +39,12 @@
 
 namespace godot {
 
+RID NavigationRegion2D::get_rid() const {
+	static GDExtensionMethodBindPtr _gde_method_bind = internal::gdextension_interface_classdb_get_method_bind(NavigationRegion2D::get_class_static()._native_ptr(), StringName("get_rid")._native_ptr(), 2944877500);
+	CHECK_METHOD_BIND_RET(_gde_method_bind, RID());
+	return internal::_call_native_mb_ret<RID>(_gde_method_bind, _owner);
+}
+
 void NavigationRegion2D::set_navigation_polygon(const Ref<NavigationPolygon> &navigation_polygon) {
 	static GDExtensionMethodBindPtr _gde_method_bind = internal::gdextension_interface_classdb_get_method_bind(NavigationRegion2D::get_class_static()._native_ptr(), StringName("set_navigation_polygon")._native_ptr(), 1515040758);
 	CHECK_METHOD_BIND(_gde_method_bind);

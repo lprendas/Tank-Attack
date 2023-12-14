@@ -50,6 +50,7 @@ class NavigationRegion3D : public Node3D {
 
 public:
 
+	RID get_rid() const;
 	void set_navigation_mesh(const Ref<NavigationMesh> &navigation_mesh);
 	Ref<NavigationMesh> get_navigation_mesh() const;
 	void set_enabled(bool enabled);

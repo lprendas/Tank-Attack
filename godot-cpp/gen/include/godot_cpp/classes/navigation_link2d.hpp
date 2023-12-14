@@ -34,6 +34,7 @@
 #define GODOT_CPP_NAVIGATION_LINK2D_HPP
 
 #include <godot_cpp/classes/node2d.hpp>
+#include <godot_cpp/variant/rid.hpp>
 #include <godot_cpp/variant/vector2.hpp>
 
 #include <godot_cpp/core/class_db.hpp>
@@ -47,6 +48,7 @@ class NavigationLink2D : public Node2D {
 
 public:
 
+	RID get_rid() const;
 	void set_enabled(bool enabled);
 	bool is_enabled() const;
 	void set_bidirectional(bool bidirectional);

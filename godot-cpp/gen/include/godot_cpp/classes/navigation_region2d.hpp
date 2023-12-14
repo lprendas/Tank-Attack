@@ -50,6 +50,7 @@ class NavigationRegion2D : public Node2D {
 
 public:
 
+	RID get_rid() const;
 	void set_navigation_polygon(const Ref<NavigationPolygon> &navigation_polygon);
 	Ref<NavigationPolygon> get_navigation_polygon() const;
 	void set_enabled(bool enabled);
