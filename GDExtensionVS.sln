@@ -7,20 +7,20 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GDExtensionVS", "GDExtensio
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Editor_Debug_Godot|x64 = Editor_Debug_Godot|x64
-		Editor_Debug_Godot|x86 = Editor_Debug_Godot|x86
-		Game_Debug_Godot|x64 = Game_Debug_Godot|x64
-		Game_Debug_Godot|x86 = Game_Debug_Godot|x86
+		Debug_EDITOR_Godot|x64 = Debug_EDITOR_Godot|x64
+		Debug_EDITOR_Godot|x86 = Debug_EDITOR_Godot|x86
+		Debug_GAME_Godot|x64 = Debug_GAME_Godot|x64
+		Debug_GAME_Godot|x86 = Debug_GAME_Godot|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{710C6B44-6283-4410-86BD-8243CD6580FB}.Editor_Debug_Godot|x64.ActiveCfg = Editor_Debug_Godot|x64
-		{710C6B44-6283-4410-86BD-8243CD6580FB}.Editor_Debug_Godot|x64.Build.0 = Editor_Debug_Godot|x64
-		{710C6B44-6283-4410-86BD-8243CD6580FB}.Editor_Debug_Godot|x86.ActiveCfg = Editor_Debug_Godot|Win32
-		{710C6B44-6283-4410-86BD-8243CD6580FB}.Editor_Debug_Godot|x86.Build.0 = Editor_Debug_Godot|Win32
-		{710C6B44-6283-4410-86BD-8243CD6580FB}.Game_Debug_Godot|x64.ActiveCfg = Game_Debug_Godot|x64
-		{710C6B44-6283-4410-86BD-8243CD6580FB}.Game_Debug_Godot|x64.Build.0 = Game_Debug_Godot|x64
-		{710C6B44-6283-4410-86BD-8243CD6580FB}.Game_Debug_Godot|x86.ActiveCfg = Game_Debug_Godot|Win32
-		{710C6B44-6283-4410-86BD-8243CD6580FB}.Game_Debug_Godot|x86.Build.0 = Game_Debug_Godot|Win32
+		{710C6B44-6283-4410-86BD-8243CD6580FB}.Debug_EDITOR_Godot|x64.ActiveCfg = Debug_GAME_Godot|x64
+		{710C6B44-6283-4410-86BD-8243CD6580FB}.Debug_EDITOR_Godot|x64.Build.0 = Debug_GAME_Godot|x64
+		{710C6B44-6283-4410-86BD-8243CD6580FB}.Debug_EDITOR_Godot|x86.ActiveCfg = Debug_EDITOR_Godot|Win32
+		{710C6B44-6283-4410-86BD-8243CD6580FB}.Debug_EDITOR_Godot|x86.Build.0 = Debug_EDITOR_Godot|Win32
+		{710C6B44-6283-4410-86BD-8243CD6580FB}.Debug_GAME_Godot|x64.ActiveCfg = Debug_GAME_Godot|x64
+		{710C6B44-6283-4410-86BD-8243CD6580FB}.Debug_GAME_Godot|x64.Build.0 = Debug_GAME_Godot|x64
+		{710C6B44-6283-4410-86BD-8243CD6580FB}.Debug_GAME_Godot|x86.ActiveCfg = Debug_GAME_Godot|Win32
+		{710C6B44-6283-4410-86BD-8243CD6580FB}.Debug_GAME_Godot|x86.Build.0 = Debug_GAME_Godot|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
