@@ -35,9 +35,6 @@ void CuboExample::_ready()
 {
     if (Engine::get_singleton()->is_editor_hint()) return;
     UtilityFunctions::print("hola mundo Godot 3D");
-    UtilityFunctions::print("hola mundo Godot 3D");
-    UtilityFunctions::print("hola mundo Godot 3D");
-    UtilityFunctions::print("hola mundo Godot 3D");
     
 }
 
