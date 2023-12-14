@@ -26,7 +26,8 @@ Overlap options
 
 debug editor and debug game. You can run the game directly from Visual Studio with F5 in debug mode or open the Godot editor with CTRL + F5.
 
-Keep in mind that in editor mode the GDextension library is not reloaded, therefore you will have to run it with CTRL + F5 so that when you compile with F7 the changes will be seen in the editor without having to restart it.
+Keep in mind that in editor mode the GDextension library is not reloaded, therefore you will have to run it with CTRL + F5 so that when you compile with F7 the changes will be seen in the editor without having to restart it. This is due to a problem with the debug PDB file overwriting that is already reported on Godot's github.
+
 In Game mode, you can debug the game and when recording you will have a hot reload and see the changes in real time.
 
 For now I only have a solution in DEBUG mode, the RELEASE mode cannot make them work in visual studio at the moment, however the static library is loaded in the editor for future improvements.
