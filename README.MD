@@ -91,9 +91,10 @@ Pay attention to the location of "extension_api.json"
 
 ![03_configuration](https://github.com/godotengine/godot-cpp/assets/12847027/4832cbc8-9ec9-45f0-a536-7087330aaf8c)
 
-![04_configuration](https://github.com/godotengine/godot-cpp/assets/12847027/15a7019f-51bb-4ade-966d-7a4315556f79)
+![Captura de pantalla 2023-12-14 123726](https://github.com/godotengine/godot-cpp/assets/12847027/7547483b-2867-4cc9-bd19-1a457c9a2f08)
 
-![05_configuration](https://github.com/godotengine/godot-cpp/assets/12847027/78899e72-3b58-42af-8aa9-cb722d45bfdc)
+![Captura de pantalla 2023-12-14 123745](https://github.com/godotengine/godot-cpp/assets/12847027/bdb93117-15c8-4bd4-8dc3-368c0da1d3a0)
+
 
 
 # C/C++
