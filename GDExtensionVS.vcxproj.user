@@ -25,8 +25,8 @@
     <LocalDebuggerCommandArguments />
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Editor_Debug_Godot|x64'">
-    <LocalDebuggerCommand>C:\Users\ARIEL\Documents\Visual Studio proyectos\visual-studio-godot-engine-gdextension-cpp-template\External_Programs\Godot_Editor\Godot_v4.2.1-stable_win64.exe</LocalDebuggerCommand>
-    <LocalDebuggerWorkingDirectory>.\Godot_proyect</LocalDebuggerWorkingDirectory>
+    <LocalDebuggerCommand>$(ProjectDir)External_Programs\Godot_Editor\Godot_v4.2.1-stable_win64.exe</LocalDebuggerCommand>
+    <LocalDebuggerWorkingDirectory>$(ProjectDir)Godot_proyect</LocalDebuggerWorkingDirectory>
     <DebuggerFlavor>WindowsLocalDebugger</DebuggerFlavor>
     <LocalDebuggerCommandArguments>--editor </LocalDebuggerCommandArguments>
     <LocalDebuggerAttach>false</LocalDebuggerAttach>

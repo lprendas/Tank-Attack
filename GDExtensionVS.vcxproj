@@ -121,9 +121,9 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Editor_Debug_Godot|x64'">
-    <OutDir>.\Godot_proyect\bin\</OutDir>
-    <IncludePath>.\godot-cpp\gdextension;.\godot-cpp\gen\include;.\godot-cpp\gen\include\godot_cpp;.\godot-cpp\gen\include\godot_cpp\classes;.\godot-cpp\gen\include\godot_cpp\core;.\godot-cpp\gen\include\godot_cpp\variant;.\godot-cpp\include;.\godot-cpp\include\godot_cpp;.\godot-cpp\include\godot_cpp\classes;.\godot-cpp\include\godot_cpp\core;.\godot-cpp\include\godot_cpp\templates;.\godot-cpp\include\godot_cpp\variant;$(IncludePath)</IncludePath>
-    <LibraryPath>.\godot-cpp\bin;$(LibraryPath)</LibraryPath>
+    <OutDir>$(ProjectDir)Godot_proyect\bin\</OutDir>
+    <IncludePath>$(ProjectDir)godot-cpp\gdextension;$(ProjectDir)godot-cpp\gen\include;$(ProjectDir)godot-cpp\gen\include\godot_cpp;$(ProjectDir)godot-cpp\gen\include\godot_cpp\classes;$(ProjectDir)godot-cpp\gen\include\godot_cpp\core;$(ProjectDir)godot-cpp\gen\include\godot_cpp\variant;$(ProjectDir)godot-cpp\include;$(ProjectDir)godot-cpp\include\godot_cpp;$(ProjectDir)godot-cpp\include\godot_cpp\classes;$(ProjectDir)godot-cpp\include\godot_cpp\core;$(ProjectDir)godot-cpp\include\godot_cpp\templates;$(ProjectDir)godot-cpp\include\godot_cpp\variant;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)godot-cpp\bin;$(LibraryPath)</LibraryPath>
     <TargetName>libgdexample.windows.template_debug.x86_64</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Game_Debug_Godot|x64'">
@@ -204,7 +204,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalLibraryDirectories>.\godot-cpp\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(ProjectDir)godot-cpp\bin;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <AdditionalDependencies>libgodot-cpp.windows.template_debug.x86_64.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
