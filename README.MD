@@ -22,18 +22,21 @@ Overlap options
 ![Visual_studio_compiler_gdnative](https://gitlab.com/kone9/godot-engine-4.2-template-gdextension-with-vscode-windows-11/-/raw/main/01_instalacionVisualStudio.png)
 
 
-## You have 4 solutions
+## You have 2 solutions
 
-debug mode and release mode. You can run the game directly from visual studio or open the godot editor.
-If you select game, open the game, if you select editor, open the editor.
-For development, debug mode compilations are recommended, for final compilations release mode.
+debug editor and debug game. You can run the game directly from Visual Studio with F5 in debug mode or open the Godot editor with CTRL + F5.
 
-* Editor_Debug_Godot
-* Editor_Release_Godot
-* Game_Debug_Godot
-* Game_Release_Godot
+Keep in mind that in editor mode the GDextension library is not reloaded, therefore you will have to run it with CTRL + F5 so that when you compile with F7 the changes will be seen in the editor without having to restart it.
+In Game mode, you can debug the game and when recording you will have a hot reload and see the changes in real time.
 
-![Captura de pantalla 2023-12-04 191858](https://github.com/godotengine/godot-cpp/assets/12847027/0fa819eb-744b-4547-8e50-a912d96bdc77)
+For now I only have a solution in DEBUG mode, the RELEASE mode cannot make them work in visual studio at the moment, however the static library is loaded in the editor for future improvements.
+
+* Debug_EDITOR_Godot
+* Debug_GAME_Godot
+* Release_EDITOR_Godot (IT DOES NOT WORK AT THE MOMENT AND IS NOT VISIBLE)
+* Release_GAME_Godot (IT DOES NOT WORK AT THE MOMENT AND IS NOT VISIBLE)
+
+![Captura de pantalla 2023-12-14 133259](https://github.com/godotengine/godot-cpp/assets/12847027/21015767-f810-4ca9-86da-2ec255156048)
 
 
 
