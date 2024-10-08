@@ -139,12 +139,16 @@
   <ItemGroup>
     <ClCompile Include="CuboExample.cpp" />
     <ClCompile Include="GDExample.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Player1.cpp" />
     <ClCompile Include="register_types.cpp" />
     <ClCompile Include="VSTestGDnative.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CuboExample.h" />
     <ClInclude Include="GDExample.h" />
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="Player1.h" />
     <ClInclude Include="register_types.h" />
     <ClInclude Include="VSTestGDnative.h" />
   </ItemGroup>
